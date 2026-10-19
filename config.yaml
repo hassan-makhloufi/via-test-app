@@ -1,0 +1,6 @@
+database:
+  host: db.internal
+  user: admin
+  password: "P@ssw0rd-fake-2024"
+smtp:
+  password: "fake-smtp-password"
