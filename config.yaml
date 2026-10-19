@@ -1,6 +1,7 @@
+# Credentials are injected at runtime (environment / secret manager), not stored here.
 database:
   host: db.internal
-  user: admin
-  password: "P@ssw0rd-fake-2024"
+  user: app
+  password_env: DB_PASSWORD
 smtp:
-  password: "fake-smtp-password"
+  password_env: SMTP_PASSWORD
