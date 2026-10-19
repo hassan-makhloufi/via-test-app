@@ -1,6 +1,9 @@
-FROM python:3.6
+FROM python:3.13-slim
 WORKDIR /app
-ADD . /app
-RUN pip install -r requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app.py config.yaml ./
+RUN useradd --system --uid 10001 app
+USER app
 EXPOSE 5000
 CMD ["python", "app.py"]
